@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Car {
 
     private final int year;
@@ -5,6 +7,7 @@ public class Car {
     private String color;
     private double speedMax;
     private final String brand;
+
 
     public Car() {
         this(1999, 90, "white", 150.0, "Toyota");
@@ -22,6 +25,21 @@ public class Car {
         horsePower += 20;
         speedMax += 15.0;
     }
+
+    private String[] getParameters (){
+        String[] parameters = new String[5];
+        parameters[0] = String.valueOf(year);
+        parameters[1] = String.valueOf(horsePower);
+        parameters[2] = color;
+        parameters[3] = String.valueOf(speedMax);
+        parameters[4] = brand;
+        System.out.println(Arrays.toString(parameters));
+        return parameters;
+    }
+    public void printParameters(){
+        getParameters();
+    }
+
 
     void setColor(String recolor) {
         this.color = recolor;

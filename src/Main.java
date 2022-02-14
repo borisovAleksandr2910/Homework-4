@@ -8,6 +8,7 @@ public class Main {
        car1.engineTuning();
        car2.setColor("Blue");
        car3.setColor("Orange");
+       car1.printParameters();
 
     }
 }
